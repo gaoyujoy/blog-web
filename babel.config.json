@@ -1,0 +1,9 @@
+{
+  "presets": [
+    ["@babel/preset-env", { "bugfixes": true, "targets": { "esmodules": true } }],
+    ["@babel/preset-typescript", { "onlyRemoveTypeImports": true }]
+  ],
+  "overrides": [
+    { "test": ["**/*.ts", "**/*.tsx"] }
+  ]
+}
