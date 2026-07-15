@@ -441,9 +441,57 @@ nav a:hover {
     700 18px ui-monospace,
     monospace;
 }
-.archive-tag {
-  margin: 22px 0 7px;
+.archive-filters {
+  padding: 22px 0 8px;
+  border-bottom: 1px solid var(--line);
+}
+.archive-filter-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+.archive-clear {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 13px;
+}
+.archive-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.archive-tag-button {
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 5px 11px;
+  background: var(--surface);
   color: var(--muted);
+  cursor: pointer;
+  font-size: 12px;
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    background 0.2s;
+}
+.archive-tag-button:hover,
+.archive-tag-button.selected {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.archive-filter-hint {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+.archive-empty {
+  padding: 40px 0;
 }
 .archive-item {
   display: flex;
