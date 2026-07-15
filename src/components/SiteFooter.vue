@@ -1,10 +1,19 @@
 <script setup lang="ts">
 defineProps<{ home?: boolean }>();
 const rssUrl = import.meta.env.VITE_RSS_URL || "/rss.xml";
+const recordUrl = "http://beian.miit.gov.cn/";
 </script>
 <template>
   <footer class="site-footer">
-    <div v-if="home" class="record">渝ICP备18012981号</div>
+    <a
+      v-if="home"
+      class="record"
+      :href="recordUrl"
+      target="_blank"
+      rel="noopener"
+    >
+      渝ICP备18012981号
+    </a>
     <template v-else>
       <span>© {{ new Date().getFullYear() }} gaoyu</span
       ><a href="#" aria-label="GitHub"
@@ -21,7 +30,13 @@ const rssUrl = import.meta.env.VITE_RSS_URL || "/rss.xml";
         </svg>
         GitHub</a
       ><a :href="rssUrl" target="_blank" rel="noopener">RSS</a
-      ><span>渝ICP备18012981号</span>
+      ><a
+        class="record"
+        :href="recordUrl"
+        target="_blank"
+        rel="noopener"
+        >渝ICP备18012981号</a
+      >
     </template>
   </footer>
 </template>
